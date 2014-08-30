@@ -32,7 +32,6 @@ echo <<<HEADER
         <title>$pageTitle</title>
         <meta name="keywords" content="$metaKey">
         <meta name="description" content="$metaDesc">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         $pageAssets
