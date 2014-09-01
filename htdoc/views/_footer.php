@@ -1,6 +1,5 @@
 <?php
 
-
 echo <<<FOOTER
         </div>
       </div>

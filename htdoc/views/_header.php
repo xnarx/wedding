@@ -25,6 +25,27 @@ if ($daysLeft > 0) {
   $countdown = "Today is the wedding!";
 }
 
+// Left Nav
+$leftNavArray = array(
+  "home"                  => "/",
+  "about us"              => "/about_us",
+  "ceremony and reception"  => "/ceremony_and_reception",
+  "wedding party"         => "/wedding_party",
+  "accomodations"         => "/accomodations",
+  "schedule of events"    => "/schedule_of_events",
+  "photo album"           => "/photo_album"
+);
+
+$leftNav = '';
+
+foreach ($leftNavArray as $title => $href) {
+  if (str_replace(' ','_',$title) !== $page) {
+    $leftNav .= '<li><a href="' . $href . '">' . $title . '</a></li>';
+  } else {
+    $leftNav .= '<li class="current"><a href="javascript: void(0);">' . $title . '</a></li>';
+  }
+}
+
 echo <<<HEADER
   <!DOCTYPE html>
     <html>
@@ -32,7 +53,9 @@ echo <<<HEADER
         <title>$pageTitle</title>
         <meta name="keywords" content="$metaKey">
         <meta name="description" content="$metaDesc">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="/favicon.ico">
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         $pageAssets
@@ -50,5 +73,10 @@ echo <<<HEADER
               <span>$countdown</span>
             </div>
           </div>
-          <div class='content'>
+          <div class="leftNav">
+            <ul>
+              $leftNav
+            </ul>
+          </div>
+          <div class="content">
 HEADER;

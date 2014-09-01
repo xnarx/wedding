@@ -1,5 +1,6 @@
 <?php 
 
+$page = "home";
 $pageTitle = "Nick & Ariel's Wedding - Home";
 $metaKey = "";
 $metaDes = "";
@@ -10,7 +11,7 @@ PS;
 
 require ('_header.php');
 
-echo <<<HOME
+echo <<<CONTENT
   <div class="home">
     <div class="carousel-wrap">
       <div id="owl-home" class="owl-carousel">
@@ -21,12 +22,15 @@ echo <<<HOME
     </div>
     <div class="intro">
       <div class="sTitle">
-        <span>Welcome to our wedding Website!</span>
+        <span>Welcome to our wedding website!</span>
       </div>
       <div class="sBody">
         <span>
-          This site is currently under construction, but come back soon for more information.
+          Click the logo below to see the room rates for the event.  Check back later for more information on the wedding.
         </span>
+      </div>
+      <div>
+        <a href="https://resweb.passkey.com/go/MendlowitzRichterWed" target="_blank" class="marriott"><div></div></a>
       </div>
     </div>
   </div>
@@ -42,6 +46,6 @@ echo <<<HOME
       });
     });
   </script>
-HOME;
+CONTENT;
 
 require ('_footer.php');

@@ -21,6 +21,17 @@ body {
   padding: 0;
 }
 
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .pageWrapper {
   width: 800px;
   height: 680px;
@@ -30,17 +41,10 @@ body {
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   position: relative;
-}
-
-.content {
-  padding: 0 20px;
   font-family: Arial, sans-serif;
   font-size: 12px;
-  color: #666;
+  color: #333;
 }
 
 /*** COMMON ***/
@@ -50,14 +54,13 @@ body {
 }
 
 .sBody {
-  padding: 5px 175px 0;
+  padding: 5px 120px 0;
 }
 
 /*** HEADER ***/
 .header {
   text-align: center;
   padding: 0 0 20px;
-  color: #333;
 }
 
 .head-names {
@@ -87,19 +90,50 @@ body {
 }
 
 .leftTopBorder {
-  background-image: url('/img/border_top_left.png');
+  background-image: url('/img/accents/border_top_left.png');
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
 .rightBotBorder {
-  background-image: url('/img/border_bottom_right.png');
+  background-image: url('/img/accents/border_bottom_right.png');
   position: absolute;
   top: 380px;
   left: 480px;
 }
 
+/*** Left Nav ***/
+.leftNav {
+  width: 120px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  font-size:12px;
+  text-align: right;
+  display: none; /***remove***/
+}
+
+.leftNav ul {
+  list-style-type: none;
+}
+
+.leftNav li {
+  padding: 5px 0;
+}
+
+.current a {
+  color: #999;
+  cursor: default;
+}
+
+.content {
+  /***display: inline-block;***/ /***remove***/
+  padding: 0 20px;
+  /***width: 600px;***/ /***remove***/
+  /***float: right;***/ /***remove***/
+  position: relative;
+}
 
 /*** Home ***/
 .carousel-wrap {
@@ -117,15 +151,29 @@ body {
 }
 
 .image1 {
-  background-image: url('/img/timothy_hill.jpg');
+  background-image: url('/img/home/engagement1.jpg');
 }
 
 .image2 {
-  background-image: url('/img/sunset.jpg');
+  background-image: url('/img/home/engagement2.jpg');
 }
 
 .image3 {
-  background-image: url('/img/oscar_smoking.jpg');
+  background-image: url('/img/home/timothy_hill.jpg');
 }
 
+.marriott div {
+  background-image: url('/img/home/marriott.jpg');
+  width: 68px;
+  height: 44px;
+  background-size: 100% 100%;
+  margin: 10px auto;
+  border: 1px solid #000;
+}
 
+/*** Under Construction ***/
+
+/*** Error ***/
+.error, .underConstruction {
+  text-align: center;
+}
