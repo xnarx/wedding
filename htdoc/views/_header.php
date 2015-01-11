@@ -27,22 +27,19 @@ if ($daysLeft > 0) {
 
 // Left Nav
 $leftNavArray = array(
-  "home"                  => "/",
-  "about us"              => "/about_us",
-  "ceremony and reception"  => "/ceremony_and_reception",
-  "wedding party"         => "/wedding_party",
-  "accomodations"         => "/accomodations",
-  "schedule of events"    => "/schedule_of_events",
-  "photo album"           => "/photo_album"
+  "home"                    => "/",
+  "events"                  => "/events",
+  "explore"                 => "/explore",
 );
 
 $leftNav = '';
 
 foreach ($leftNavArray as $title => $href) {
-  if (str_replace(' ','_',$title) !== $page) {
-    $leftNav .= '<li><a href="' . $href . '">' . $title . '</a></li>';
+  $class = str_replace(' ','_',$title);
+  if ($class !== $page) {
+    $leftNav .= '<li class="$current"><a href="' . $href . '">' . $title . '</a></li>';
   } else {
-    $leftNav .= '<li class="current"><a href="javascript: void(0);">' . $title . '</a></li>';
+    $leftNav .= '<li class="current $current"><a href="javascript: void(0);">' . $title . '</a></li>';
   }
 }
 
@@ -61,6 +58,15 @@ echo <<<HEADER
         $pageAssets
       </head>
       <body>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-58443111-1', 'auto');
+          ga('send', 'pageview');
+        </script>
         <div class="pageWrapper">
           <div class="leftTopBorder border"></div>
           <div class="rightBotBorder border"></div>
@@ -68,7 +74,7 @@ echo <<<HEADER
             <div class="head-title"></div>
             <div class="head-names">Nicholas & Ariel</div>
             <div class="head-date">
-              <span>4th of July 2015</span>
+              <span>4th of July, 2015</span>
               <div class='spacer'>&nbsp;</div>
               <span>$countdown</span>
             </div>
@@ -76,6 +82,9 @@ echo <<<HEADER
           <div class="leftNav">
             <ul>
               $leftNav
+              <li>
+                <a href="https://resweb.passkey.com/go/MendlowitzRichterWed" target="_blank" class="marriott"><div></div></a>
+              </li>
             </ul>
           </div>
           <div class="content">

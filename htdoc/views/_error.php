@@ -10,8 +10,7 @@ require ('_header.php');
 
 echo <<<CONTENT
   <div class="error">
-    <h1>404</h1>
-    <h2>Page Not Found.</h2>
+    <h1>Page Not Found</h1>
   </div>
 CONTENT;
 

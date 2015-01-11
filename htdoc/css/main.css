@@ -32,6 +32,12 @@ a {
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 .pageWrapper {
   width: 800px;
   height: 680px;
@@ -48,6 +54,17 @@ a {
 }
 
 /*** COMMON ***/
+.pTitle {
+  text-align: center;
+  font-family: "Brush Script MT", cursive;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.pDesc {
+
+}
+
 .sTitle {
   font-weight: bold;
   text-align: center;
@@ -109,9 +126,10 @@ a {
   display: inline-block;
   float: left;
   position: relative;
-  font-size:12px;
+  font-size: 14px;
   text-align: right;
-  display: none; /***remove***/
+  z-index: 2;
+  font-weight: bold;
 }
 
 .leftNav ul {
@@ -128,10 +146,7 @@ a {
 }
 
 .content {
-  /***display: inline-block;***/ /***remove***/
   padding: 0 20px;
-  /***width: 600px;***/ /***remove***/
-  /***float: right;***/ /***remove***/
   position: relative;
 }
 
@@ -167,13 +182,69 @@ a {
   width: 68px;
   height: 44px;
   background-size: 100% 100%;
-  margin: 10px auto;
   border: 1px solid #000;
 }
 
-/*** Under Construction ***/
+.leftNav .marriott div {
+  margin-top: 10px;
+  float: right;
+}
+
+.content .marriott div {
+  margin: 10px auto;
+}
 
 /*** Error ***/
 .error, .underConstruction {
   text-align: center;
+}
+
+/*** Content***/
+.section {
+  padding: 0 140px;
+}
+
+.events > ul > li {
+  margin-bottom: 30px;
+}
+
+.events .date {
+  font-size: 30px;
+  font-family: "Brush Script MT", cursive;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.events .activity {
+  font-size: 14px;
+  width: 500px;
+}
+
+.explore > ul > li {
+  margin-bottom: 20px;
+  overflow: hidden;
+  width: 500px;
+}
+
+.explore .picture {
+  float: left;
+  width: 35%;
+}
+
+.explore .picture > img {
+  width: 150px;
+}
+
+.explore .notes {
+  float: left;
+  width: 65%;
+}
+
+.explore .notes h3, .explore .notes p {
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.explore .notes a {
+  float: right;
 }

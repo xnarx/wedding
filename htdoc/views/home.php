@@ -41,7 +41,7 @@ echo <<<CONTENT
         slideSpeed: 300,
         paginationSpeed: 400,
         singleItem: true,
-        autoPlay: false,
+        autoPlay : 5000,
         pagination: true
       });
     });
